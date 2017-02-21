@@ -7,7 +7,8 @@ ENV ORIENTDB_DOWNLOAD_SPATIAL_SHA1 3c2ccb4c1a368e8f8ab5ef2e417422dec3d26041
 
 ENV ORIENTDB_DOWNLOAD_SPATIAL_URL ${ORIENTDB_DOWNLOAD_SERVER:-http://central.maven.org/maven2/com/orientechnologies}/orientdb-spatial/$ORIENTDB_VERSION/orientdb-spatial-$ORIENTDB_VERSION-dist.jar
 
-ENV ORIENTDB_NODE_NAME nautilus-dev
+# Change or pass it along during run time
+# ENV ORIENTDB_NODE_NAME <node name>
 
 RUN wget $ORIENTDB_DOWNLOAD_SPATIAL_URL \
     && echo "$ORIENTDB_DOWNLOAD_SPATIAL_MD5 *orientdb-spatial-$ORIENTDB_VERSION-dist.jar" | md5sum -c - \
