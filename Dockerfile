@@ -27,7 +27,7 @@ EXPOSE 2424
 EXPOSE 2480
 
 # Executable
-ENTRYPOINT ["server.sh"]
+# ENTRYPOINT []
 
 # Default command start the server
-CMD ["-Ddistributed=true"]
+CMD ["server.sh", "-Ddistributed=true"]
