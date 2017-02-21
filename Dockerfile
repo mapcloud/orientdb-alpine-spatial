@@ -15,7 +15,8 @@ RUN wget $ORIENTDB_DOWNLOAD_SPATIAL_URL \
 # this adds the bin to the path so we can run server.sh
 ENV PATH /orientdb/bin:$PATH
 
-VOLUME ["/orientdb/backup", "/orientdb/databases", "/orientdb/config"]
+#
+# VOLUME ["/orientdb/backup", "/orientdb/databases", "/orientdb/config"]
 
 WORKDIR /orientdb
 
